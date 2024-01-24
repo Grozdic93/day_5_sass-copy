@@ -1,0 +1,38 @@
+$myColor: red;
+$color: hsla(0 0 0/0.5);
+$font-size: 16px;
+$breakpoints-up: (
+  "medium": 43.75em,
+  "large": 56.25em,
+  "xlarge": 90em,
+);
+
+$breakpoints-down: (
+  "small": 43.7485em,
+  "medium": 56.24875em,
+  "large": 89.99875em,
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+@mixin responsive-text($small-screen, $big-screen) {
+  font-size: $small-screen;
+
+  @media (width > 500px) {
+    font-size: $big-screen;
+  }
+}
+body{
+    background-color: blue;
+}
+$test:blue;

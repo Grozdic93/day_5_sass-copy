@@ -1,0 +1,60 @@
+body {
+  background-color: blue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: red;
+}
+
+.nav__ul {
+  background-color: blue;
+  display: flex;
+  list-style: none;
+}
+.nav__ul__link {
+  flex: 1;
+}
+.nav__ul__link a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem;
+}
+.nav__ul__link a:hover {
+  transform: scale(1.3);
+}
+.nav__ul__link--diff {
+  background-color: red;
+}
+
+.wrapper {
+  background-color: purple !important;
+  height: 50vh;
+  border: 1px solid black;
+}
+.wrapper .box, .wrapper .sibling {
+  font-size: 16px;
+  width: 50%;
+  height: 50%;
+  border: 1px solid red;
+}
+@media (width > 500px) {
+  .wrapper .box, .wrapper .sibling {
+    width: 300px;
+  }
+}
+.wrapper .sibling {
+  font-size: 26px;
+  background-color: transparent;
+}
+
+@media (min-width: 43.75em) {
+  p {
+    font-size: 32px;
+  }
+}/*# sourceMappingURL=style.css.map */
